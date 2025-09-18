@@ -1,18 +1,20 @@
-package com.jose.posto.entities;
-
-import jakarta.persistence.*;
+package com.jose.posto.dto;
 
 import java.math.BigDecimal;
 
-@Entity
-@Table(name = "tb_combustivel")
-public class Combustivel {
+public class CombustivelDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomeCombustivel;
     private BigDecimal precoPorLitro;
+
+    public CombustivelDTO() {}
+
+    public CombustivelDTO(Long id, String nomeCombustivel, BigDecimal precoPorLitro) {
+        this.id = id;
+        this.nomeCombustivel = nomeCombustivel;
+        this.precoPorLitro = precoPorLitro;
+    }
 
     public Long getId() {
         return id;
@@ -22,16 +24,16 @@ public class Combustivel {
         this.id = id;
     }
 
-    public BigDecimal getPrecoPorLitro() {
-        return precoPorLitro;
-    }
-
     public String getNomeCombustivel() {
         return nomeCombustivel;
     }
 
     public void setNomeCombustivel(String nomeCombustivel) {
         this.nomeCombustivel = nomeCombustivel;
+    }
+
+    public BigDecimal getPrecoPorLitro() {
+        return precoPorLitro;
     }
 
     public void setPrecoPorLitro(BigDecimal precoPorLitro) {
