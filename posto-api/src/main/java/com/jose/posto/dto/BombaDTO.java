@@ -13,6 +13,7 @@ public class BombaDTO {
     public BombaDTO(Bomba bomba) {
         this.id = bomba.getId();
         this.nomeBomba = bomba.getNomeBomba();
+        this.combustivel = new CombustivelDTO(bomba.getCombustivel());
     }
 
     public Long getId() {

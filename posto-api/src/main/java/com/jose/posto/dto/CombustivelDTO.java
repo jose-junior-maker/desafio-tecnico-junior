@@ -1,5 +1,7 @@
 package com.jose.posto.dto;
 
+import com.jose.posto.entities.Combustivel;
+
 import java.math.BigDecimal;
 
 public class CombustivelDTO {
@@ -10,10 +12,10 @@ public class CombustivelDTO {
 
     public CombustivelDTO() {}
 
-    public CombustivelDTO(Long id, String nomeCombustivel, BigDecimal precoPorLitro) {
-        this.id = id;
-        this.nomeCombustivel = nomeCombustivel;
-        this.precoPorLitro = precoPorLitro;
+    public CombustivelDTO(Combustivel combustivel) {
+        this.id = combustivel.getId();
+        this.nomeCombustivel = combustivel.getNomeCombustivel();
+        this.precoPorLitro = combustivel.getPrecoPorLitro();
     }
 
     public Long getId() {

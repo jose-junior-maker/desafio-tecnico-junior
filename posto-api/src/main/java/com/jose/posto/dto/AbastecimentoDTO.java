@@ -20,6 +20,7 @@ public class AbastecimentoDTO {
         this.litragem = abastecimento.getLitragem();
         this.dataAbastecimento = abastecimento.getDataAbastecimento();
         this.valorAbastecimento = abastecimento.valorTotal();
+        this.bomba = new BombaDTO(abastecimento.getBomba());
     }
 
     public void setId(Long id) {
